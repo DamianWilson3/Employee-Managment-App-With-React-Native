@@ -1,0 +1,74 @@
+Steps to Publish to Play Store:
+
+(Assuming you've already finished the code of your react native app and
+haven't yet genreated the release apk)
+
+1. Generate Upload Key:
+ - Enter your details and set up a password, this will be the key to your app
+
+2. Set Up Gradle Variables:
+ - Allow for the release apk to be generated, ensures only the person with the 
+   key's password can perform this.
+
+3. Add signing config to your App's gradle config:
+ - Allows for release builds to be signed using your upload key
+
+4. Generate the Release APK
+ - Produce an AAB (Android App Bundle) that is ready to be uploaded to google play
+
+5. (Recommended) Test Release Build of your App
+
+6. (Optional) Enable Proguard to reduce APK size
+
+7. Ensure you have signed up for a Google Play developer account
+
+8. Create new app on the Google Play Console
+
+9. Ensure your app's AAB/APK files meet Google Play's requirements
+ - Target API requirements, size requirements
+
+10. Set Up store listing for your app
+ - i.e. Features, Screenshots, Details etc
+
+11. Publish App!
+
+(Sources: https://support.google.com/googleplay/android-developer/answer/113469?hl=en
+          https://facebook.github.io/react-native/docs/signed-apk-android)
+
+
+Steps to Publish on the App Store (iOS):
+
+(Assuming you are using Expo to develop a Create-React-Native-App)
+
+1. Ensure you meet Launch pre-requisites:
+ - Have App name, description, screenshots, version, bundleID, Developer Profile (Apple Dev ID), icons, countries available etc.
+
+2. Set up app.json Configurations.
+ - Required properties: name, slug, sdkVersion
+
+3. Click Publish in Expo Dev Tools, or run 'expo publish' in command line, to receive code for iOS and Android focus on iOS
+
+4. Build app: 'expo build:ios' in command line
+
+5. (Optional) upload own distribution certificate or let Expo handle for you.
+
+6. Once built you can download the '.ipa' file of your app!
+
+7. Create an iOS distribution provisioning profile and distribution cerificate
+
+8. Create an iTunes Connect record for your app
+
+9. Select Add New App in the Connect Profile dashboard
+
+10. Archive and upload your app (.ipa file) using XCode
+
+11.  Configure App metadata and further details (from step 1)
+
+12. Submit App for review
+
+13. Check App status, if Approved your App is published.
+
+
+
+
+
