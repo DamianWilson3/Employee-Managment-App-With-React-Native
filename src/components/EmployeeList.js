@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FlatList } from 'react-native';
+import { FlatList, Text } from 'react-native';
 
 import { employeesFetch } from '../actions';
-import { Spinner } from '../components/common';
+//import { Spinner } from '../components/common';
 import ListItem from './ListItem';
 
 class EmployeeList extends Component {
@@ -23,7 +23,7 @@ class EmployeeList extends Component {
 
     
     render() {
-        if (!this.props.employees.length) return <Spinner size="large"/>;
+        //if (!this.props.employees.length) return <Text>New? Click Add</Text>;
         return (
             <FlatList
                 data = {this.props.employees}

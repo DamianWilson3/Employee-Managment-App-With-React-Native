@@ -28,6 +28,10 @@ class EmployeeEdit extends Component {
         Communications.text(phone, `Your upcoming shift is on ${shift}`);
     }
 
+    onCallPress() {
+        Communications.phonecall(this.props.phone, true);
+    }
+
     onAccept() {
         const { uid } = this.props.employee;
 
@@ -53,6 +57,13 @@ class EmployeeEdit extends Component {
                 <CardSection>
                     <Button onPress = {this.onTextPress.bind(this)}>
                         Text Schedule
+                    </Button>
+
+                </CardSection>
+
+                <CardSection>
+                    <Button onPress = {this.onCallPress.bind(this)}>
+                        Call Employee
                     </Button>
 
                 </CardSection>

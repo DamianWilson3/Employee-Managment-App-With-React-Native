@@ -9,16 +9,19 @@ class ListItem extends Component {
     }
     
     render() {
-        const { name } = this.props.employee;
+        const { name, shift } = this.props.employee;
 
 
         return (
             <TouchableWithoutFeedback onPress = {this.onRowPress.bind(this)}>
                 <View>
                     <CardSection>
-                        <Text style = { styles.titleStyle}>
-                            {name}
-                        </Text>
+                        <View style = {styles.containerStyle}>
+                            <Text style = { styles.titleStyle}>
+                                {name} 
+                            </Text>
+                        </View>
+                        
                 </CardSection>
                 </View>
             </TouchableWithoutFeedback>
@@ -30,7 +33,11 @@ class ListItem extends Component {
 const styles = {
     titleStyle: {
         fontSize: 18,
-        paddingLeft: 15
+        paddingLeft: 15,
+        
+    },
+    containerStyle: {
+        alignItems: 'center'
     }
 }
 
